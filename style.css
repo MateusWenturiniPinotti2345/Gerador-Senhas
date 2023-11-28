@@ -1,0 +1,103 @@
+/* Importação de fontes */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro&display=swap');
+
+/* Definição de variáveis para reutilização */
+:root {
+  --font-primary: 'Poppins', sans-serif;
+  --font-secondary: 'Roboto', sans-serif;
+  --accent-color: blueviolet;
+  --padding-default: 32px;
+  --box-shadow-default: 0 1px 20px #FFFF00;
+  --password-font-size: 40px; /* Tamanho da fonte da senha */
+}
+
+/* Estilos gerais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Aplicando estilos ao body */
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4B0082;
+  font-family: var(--font-primary);
+  font-size: 18px;
+  margin: 32px;
+  padding: 32px;
+  background-image: url('img/pexels-photo-919734.webp'); /* Imagem de fundo */
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: #fff; /* Cor do texto */
+}
+
+/* Seção principal (main) */
+main {
+  padding: var(--padding-default);
+  box-shadow: var(--box-shadow-default);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* Elementos dentro de main */
+main > div {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+/* Inputs gerais */
+input {
+  padding: 5px;
+  outline: none;
+  border: 1px solid var(--accent-color);
+}
+
+/* Checkbox */
+input[type=checkbox] {
+  width: 18px;
+  height: 18px;
+}
+
+/* Range input */
+input[type=range] {
+  width: 90%;
+}
+
+/* Botões */
+button {
+  background-color: var(--accent-color);
+  cursor: pointer;
+  color: rgb(75, 0, 130);
+  border: none;
+  padding: 8px 15px;
+}
+
+/* Estilo para exibir a senha gerada */
+#senha-gerada {
+  font-size: var(--password-font-size);
+  color: blue; /* Cor azul para a senha gerada */
+}
+
+/* Media Queries para tornar o design responsivo */
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+/* Botão Gerar */
+button#btnGerar {
+  background-color: blueviolet;
+  cursor: pointer;
+  color: Yellow;
+  border: none;
+  padding: 15px 20px;
+}
